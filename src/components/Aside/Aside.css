@@ -162,18 +162,7 @@ span.mck-contact-search-tab img {
     line-height: 110px;
     display: block;
 }
-ul#mck-contact-search-list li,
-ul#mck-group-search-list li {
-    padding: 12px 15px;
-    background: white;
-    border-bottom: 1px solid #F3F3F3 !important;
-    cursor: pointer;
-}
-#mck-contact-search-input-box,
-#mck-group-search-input-box,
-#mck-assigned-search-input-box {
-    padding-left: 8px;
-}
+
 .mck-form-group {
     margin-bottom: 0px;
     float: left;
@@ -219,7 +208,7 @@ ul#mck-group-search-list li {
 }
 
 
-#kommunicate-panel-tabs li.active {
+#applozic-panel-tabs li.active {
   background: white;
 }
 

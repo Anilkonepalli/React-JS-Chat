@@ -54,10 +54,6 @@ return imageLink;
     return (
       <header className="app-header navbar">
         <button className="navbar-toggler mobile-sidebar-toggler d-lg-none" type="button" onClick={this.mobileSidebarToggle}>&#9776;</button>
-
-        {/*
-          <span className="brand-name">Kommunicate</span>
-          */}
         <ul className="nav navbar-nav d-md-down-none">
           <li className="nav-item">
             <button className="nav-link navbar-toggler sidebar-toggler" type="button" onClick={this.sidebarToggle}></button>
@@ -78,7 +74,7 @@ return imageLink;
               </DropdownMenu>
             </Dropdown>
           </li>
-          
+
         </ul>
       </header>
     )

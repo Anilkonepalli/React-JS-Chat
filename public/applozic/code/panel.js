@@ -14,10 +14,10 @@ $(document).ready(function() {
         $applozic('body').removeClass('mck-panel-3');
     });
 
-    $("#kommunicate-panel-tabs li a").on('click', function(e) {
+    $("#applozic-panel-tabs li a").on('click', function(e) {
         var $this = $(this);
-        $("#kommunicate-panel-tabs li").toggleClass('active');
-        $("#kommunicate-panel-body .mck-panel-cell").removeClass('vis').addClass('n-vis');
+        $("#applozic-panel-tabs li").toggleClass('active');
+        $("#applozic-panel-body .mck-panel-cell").removeClass('vis').addClass('n-vis');
         $("#" + $this.data('tab')).removeClass('n-vis').addClass('vis');
 
         if ($this.data('tab') == "mck-customers-cell") {

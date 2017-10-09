@@ -208,7 +208,7 @@ class Aside extends Component {
                         <div className="blk-lg-3">
                           <div id="mck-user-icon" className="mck-user-icon"></div>
                         </div>
-                        
+
                         <div className="blk-lg-2 move-right mck-menu-item mck-text-right">
                             <div className="mck-dropdown-toggle" data-toggle="mckdropdown"
                                 aria-expanded="true">
@@ -217,7 +217,9 @@ class Aside extends Component {
                               </div>
                               <ul id="mck-start-new-menu-box"
                                 className="mck-dropdown-menu mck-tab-menu-box menu-right"
-                                role="menu">
+                                role="menu" target="_self">
+                                <li><a href="javascript:void(0)" target="_self" id="mck-msg-new" className="mck-contact-search menu-item"
+                                  title="New Chat">New Chat</a></li>
                                 <li><a href="javascript:void(0)"
                                   className="mck-group-search menu-item n-vis"
                                   title="Groups">Groups</a></li>
@@ -227,77 +229,9 @@ class Aside extends Component {
                               </ul>
                         </div>
                       </div>
-                      <div id="kommunicate-panel-body" className="mck-panel-body">
+                      <div id="applozic-panel-body" className="mck-panel-body">
 
-                        <div id="mck-customers-cell" className="mck-customers-cell mck-panel-cell n-vis">
 
-                          <div id="mck-search-tab-box" className="mck-search-tab-box mck-row n-vis">
-                            <div className="mck-row">
-                              <ul className="mck-nav mck-nav-panel">
-                                <li className="mck-nav-item mck-nav-divider"><a id="mck-contact-search-tab"
-                                  className="mck-nav-link mck-contact-search active" href="javascript:void(0)"><strong>Contacts</strong></a></li>
-                                <li className="mck-nav-item"><a id="mck-group-search-tab" className="mck-nav-link mck-group-search" href="javascript:void(0)"><strong>Groups</strong></a>
-                                </li>
-                              </ul>
-                            </div>
-                          </div>
-
-                          <div className="mck-box-body">
-                            <div className="mck-form-group">
-                              <div id="mck-contact-search-input-box" className="mck-input-group blk-lg-12">
-                                <span
-                                  className="mck-search-icon"><a href="javascript:void(0)" role="link"
-                                  className="mck-contact-search-link"><span
-                                    className="mck-icon-search"></span></a></span>
-                                <input id="mck-contact-search-input" type="text"
-                                  data-provide="typeahead" placeholder="Search..." autoFocus />
-                              </div>
-                               <div id="mck-group-search-input-box" className="mck-input-group blk-lg-12 n-vis">
-                                <span
-                                  className="mck-search-icon"><a href="javascript:void(0)" role="link"
-                                  className="mck-group-search-link"><span
-                                    className="mck-icon-search"></span></a></span>
-                                <input id="mck-group-search-input" type="text"
-                                  data-provide="typeahead" placeholder="Search..." autoFocus />
-                              </div>
-                            </div>
-                            <div className="mck-tab-cell">
-                              <div className="mck-message-inner">
-                                <ul id="mck-contact-search-list"
-                                  className="mck-contact-list mck-contact-search-list mck-nav mck-nav-tabs mck-nav-stacked"></ul>
-                                      <ul id="mck-group-search-list"
-                                  className="mck-contact-list mck-group-search-list mck-nav mck-nav-tabs mck-nav-stacked n-vis"></ul>
-                                <div id="mck-no-search-contacts" className="mck-show-more-icon n-vis">
-                                  <h3>No contacts yet!</h3>
-                                </div>
-                                  <div id="mck-no-search-groups" className="mck-show-more-icon n-vis">
-                                  <h3>No groups yet!</h3>
-                                </div>
-                                  <div id="mck-search-loading" className="mck-loading n-vis">
-                                    <img src="applozic/images/ring.gif"/>
-                                  </div>
-                              </div>
-                            </div>
-                          </div>
-
-                        </div>
-
-                        <div id="mck-unassigned-cell" className="mck-unassigned-cell mck-panel-cell n-vis">
-                          <div className="mck-panel-inner mck-contacts-inner">
-                            <ul id="mck-assigned-list"
-                              className="people mck-contact-list mck-nav mck-nav-tabs mck-nav-stacked">
-                            </ul>
-                          </div>
-                          <div id="mck-unassigned-loading" className="mck-loading n-vis">
-                            <img src="applozic/images/ring.gif"/>
-                          </div>
-                          <div id="mck-no-unassigned-text"
-                            className="mck-no-data-text mck-text-muted n-vis">No
-                            Leads yet!</div>
-                          <div id="mck-show-more-icon" className="mck-show-more-icon n-vis">
-                            <h3>No more leads!</h3>
-                          </div>
-                        </div>
 
 
                         <div id="mck-contact-cell" className="mck-assigned-cell mck-panel-cell">
@@ -835,7 +769,73 @@ class Aside extends Component {
                     </div>
                   </div>
                 </div>
-
+                <div id="mck-contact-search-box"
+                  className="mck-box mck-contact-search-box mck-sm-modal-box fade"
+                  aria-hidden="false">
+                  <div className="mck-box-dialog mck-box-sm">
+                    <div className="mck-box-content">
+                      <div className="mck-box-top mck-row">
+                        <div className="blk-lg-10">
+                          <h4 className="mck-box-title" title="New Chat">New Chat</h4>
+                        </div>
+                        <div className="blk-lg-2">
+                          <button type="button" className="mck-box-close" data-dismiss="mckbox"
+                            aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                      </div>
+                      <div id="mck-search-tab-box" className="mck-search-tab-box mck-row">
+                        <div className="blk-lg-12">
+                          <ul className="mck-nav mck-nav-panel">
+                            <li className="mck-nav-item mck-nav-divider"><a
+                              id="mck-contact-search-tab"
+                              className="mck-nav-link mck-contact-search active" a href="javascript:void(0)" ><strong>Contacts</strong></a></li>
+                            <li className="mck-nav-item"><a id="mck-group-search-tab"
+                              className="mck-nav-link mck-group-search" a href="javascript:void(0)" ><strong>Groups</strong></a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div className="mck-box-body">
+                        <div className="mck-form-group">
+                          <div id="mck-contact-search-input-box"
+                            className="blk-lg-12">
+                            <input id="mck-contact-search-input" type="text"
+                              data-provide="typeahead" placeholder="Search..." autofocus /> <span
+                              className="mck-search-icon"><a href="#" role="link"
+                              className="mck-contact-search-link" target="_self"><span
+                                className="mck-icon-search"></span></a></span>
+                          </div>
+                          <div id="mck-group-search-input-box"
+                            className="mck-input-group blk-lg-12 n-vis">
+                            <input id="mck-group-search-input" type="text"
+                              data-provide="typeahead" placeholder="Search..." autofocus /> <span
+                              className="mck-search-icon"><a href="#" role="link"
+                              className="mck-group-search-link" target="_self"><span className="mck-icon-search"></span></a></span>
+                          </div>
+                        </div>
+                        <div className="mck-tab-cell">
+                          <div className="mck-message-inner">
+                            <ul id="mck-contact-search-list"
+                              className="mck-contact-list mck-contact-search-list mck-nav mck-nav-tabs mck-nav-stacked"></ul>
+                            <ul id="mck-group-search-list"
+                              className="mck-contact-list mck-group-search-list mck-nav mck-nav-tabs mck-nav-stacked n-vis"></ul>
+                            <div id="mck-no-search-contacts" className="mck-show-more-icon n-vis">
+                              <h3>No contacts yet!</h3>
+                            </div>
+                            <div id="mck-no-search-groups" className="mck-show-more-icon n-vis">
+                              <h3>No groups yet!</h3>
+                            </div>
+                            <div id="mck-search-loading" className="mck-loading n-vis">
+                              <img src="Public/applozic/images/ring.gif"/>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <div id="mck-goup-search-box"
                   className="mck-box mck-group-search-box mck-sm-modal-box fade"
                   aria-hidden="false">
