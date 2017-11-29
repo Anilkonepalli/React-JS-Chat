@@ -14,7 +14,7 @@ Signup at [https://www.applozic.com/signup.html](https://www.applozic.com/signup
 Documentation: [Applozic Web (Javascript) Chat & Messaging Plugin Documentation](https://docs.applozic.com/docs/web-javascript-chat-plugin)
 
 You can modify css and js files based on your design, files are present under /React-JS-Chat/public/applozic/css/app/fullview  and /React-JS-Chat/public/applozic/js/app/fullview folder .
-<img align="middle" src="https://raw.githubusercontent.com/React-JS-Chat/public/applozic/images/chat.png" />
+<img align="middle" src="https://raw.githubusercontent.com/AppLozic/React-JS-Chat/public/applozic/images/chat.png" />
 
 #### Applozic One to One and Group Chat SDK
 
