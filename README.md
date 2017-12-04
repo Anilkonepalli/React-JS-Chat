@@ -59,7 +59,7 @@ You can modify css and js files based on your design, files are present under /R
 
  
 
- ### To Intergrate Applozic Chat in Your Project
+ ### To Integrate Applozic Chat in Your Project
 
  1. Add applozic folder(/React-JS-Chat/public/applozic)in public folder of your project.
  2. Copy applozic.html (/React-JS-Chat/public/applozic) code and add it to your header or footer(Which is common to all your code).
