@@ -199,7 +199,7 @@ class Aside extends Component {
 
           <div id="tab-chat" className="row tabs hide">
             <div id="sec-chat-box" className="col-lg-12 tab-box">
-              <div id="chat-box-div" style={{height: '100%'}}>
+              <div id="chat-box-div" className="n-vis" style={{height: '100%'}}>
 
                 <div className="mck-container">
                   <div className="left mck-message-inner-left">
@@ -208,7 +208,9 @@ class Aside extends Component {
                         <div className="blk-lg-3">
                           <div id="mck-user-icon" className="mck-user-icon"></div>
                         </div>
-
+                        <div className="blk-lg-7">
+                          <h4 id="mck-box-title" className="mck-box-title mck-truncate">Conversations</h4>
+                                            </div>
                         <div className="blk-lg-2 move-right mck-menu-item mck-text-right">
                             <div className="mck-dropdown-toggle" data-toggle="mckdropdown"
                                 aria-expanded="true">
@@ -217,113 +219,64 @@ class Aside extends Component {
                               </div>
                               <ul id="mck-start-new-menu-box"
                                 className="mck-dropdown-menu mck-tab-menu-box menu-right"
-                                role="menu" target="_self">
+                                role="menu">
                                 <li><a href="javascript:void(0)" target="_self" id="mck-msg-new" className="mck-contact-search menu-item"
                                   title="New Chat">New Chat</a></li>
-                                <li><a href="javascript:void(0)"
-                                  className="mck-group-search menu-item n-vis"
+                                  <li><a href="javascript:void(0)" target="_self" 
+                                  className="mck-contact-search menu-item"
+                                  title="Contacts">Contacts</a></li>
+                                <li><a href="javascript:void(0)" target="_self"
+                                  className="mck-group-search menu-item "
                                   title="Groups">Groups</a></li>
-                                <li><a href="javascript:void(0)"
+                                <li><a href="javascript:void(0)" target="_self" 
                                   id="mck-new-group" className="menu-item" title="Create Group">Create
                                     Group</a></li>
                               </ul>
                         </div>
                       </div>
-                      <div id="applozic-panel-body" className="mck-panel-body">
+
+                      <div className="top">
+					
+				 <input type="text" id="mck-search" data-provide="typeahead"
+						placeholder="Search..."/>
+            <span className="mck-search-icon"> <a href="#" target="_self" role="link"
+						className="mck-tab-search"> <span className="mck-icon-search"></span>
+					</a></span>
+				</div>
+				<div className="mck-panel-body">
+					<div id="mck-contact-cell" className="mck-panel-cell">
+						<div className="mck-panel-inner mck-contacts-inner">
+							<ul id="mck-contact-list"
+								className="people mck-contact-list mck-nav mck-nav-tabs mck-nav-stacked"></ul>
+						</div>
+
+    
+				<div id="mck-contact-loading" className="mck-loading">
+							<img src="applozic/images/ring.gif"></img>
+					</div> 
+	
+  					<div id="mck-no-contact-text"
+							className="mck-no-data-text mck-text-muted n-vis">No
+							conversations yet!</div>
+						<div id="mck-show-more-icon" className="mck-show-more-icon n-vis">
+							<h3>No more conversations!</h3>
+						</div>
+					</div>
+				</div>
+
+				
 
 
-
-
-                        <div id="mck-contact-cell" className="mck-assigned-cell mck-panel-cell">
-
-                          <div className="mck-box-body">
-                            <div className="mck-form-group">
-                              <div id="mck-assigned-search-input-box" className="mck-input-group blk-lg-12">
-                                <span className="mck-search-icon"> <a href="javascript:void(0)" role="link"
-                                className="mck-tab-search"> <span className="mck-icon-search"></span>
-                              </a>
-                              </span> <input type="text" id="mck-search" data-provide="typeahead"
-                                placeholder="Search..." autoFocus />
-                              </div>
-                            </div>
-                            <div className="mck-tab-cell">
-                              <div className="mck-message-inner">
-                                <ul id="mck-contact-list"
-                                  className="people mck-contact-list mck-nav mck-nav-tabs mck-nav-stacked">
-                                </ul>
-                                <div id="mck-contact-loading" className="mck-loading">
-                                  <img src="applozic/images/ring.gif"/>
-                                </div>
-                                <div id="mck-no-contact-text"
-                                  className="mck-no-data-text mck-text-muted n-vis">No
-                                  conversations yet!</div>
-                                <div id="mck-show-more-icon" className="mck-show-more-icon n-vis">
-                                  <h3>No more conversations!</h3>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-                        </div>
-
-                      </div>
                     </div>
                   </div>
                   <div className="right">
                     <div className="panel-content">
-                      <div id="km-toolbar" className="km-toolbar blk-lg-12 n-vis">
-                          <div className="row">
-                            {/*<div className="col-sm-1">
-                              <i className="fa fa-user fa-lg mt-2"></i>
-                            </div>
-                            */}
-
-                            <div className="form-group col-sm-1">
-                                <span className="">Assign</span>
-                            </div>
-                            <div className="form-group col-sm-3">
-
-                              <select className="form-control" id="assign" onChange = {(event) => this.changeAssignee(event.target.value)} >
-                              {/*
-                               {
-                                  this.state.agents.map(function(user) {
-                                    return <option key={user.userId}
-                                      value={user.userId}>{user.displayName}</option>;
-                                  })
-                               }
-                                */}
-
-                                 )}
-                               </select>
-
-                            </div>
-
-                            {/*
-                            <div className="col-sm-1">
-                              <i className="fa fa-flag-o fa-lg mt-2"></i>
-                            </div>
-                            */}
-                            <div className="form-group col-sm-1">
-                                <span className="">Status</span>
-                            </div>
-                            <div className="form-group col-sm-3">
-                              <select className="form-control" id="conversation-status" onChange = {(event) => this.changeStatus(event.target.value)}>
-                                <option value="0">Open</option>
-                                <option value="1">In Progess</option>
-                                <option value="2">Close</option>
-                                <option value="3">Spam</option>
-                                <option value="4">Duplicate</option>
-                              </select>
-                            </div>
-
-                          </div>
-                      </div>
                       <div id="mck-tab-header" className="mck-box-top n-vis">
                         <div id="mck-tab-individual"
                           className="mck-tab-individual mck-row">
                           <div className="blk-lg-8 mck-box-title">
                             <div id="mck-group-tab-title" className="n-vis">
-                              <a id="mck-tab-info" href="javascript:void(0)" className="mck-tab-info">
+                              <a id="mck-tab-info" href="javascript:void(0)" target="_self" className="mck-tab-info">
                                 <div className="mck-tab-title mck-truncate name"></div>
                                 <div className="mck-tab-status mck-truncate n-vis"></div>
                                 <div className="mck-typing-box mck-truncate n-vis">
@@ -333,16 +286,16 @@ class Aside extends Component {
                             </div>
                             <div id="mck-individual-tab-title"
                               className="mck-individual-tab-title">
-                              <a id="mck-tab-info-individual" href="javascript:void(0)" className="mck-tab-info">
                                 <div className="mck-tab-title mck-truncate name"></div>
                                 <div className="mck-tab-status mck-truncate n-vis"></div>
                                 <div className="mck-typing-box mck-truncate n-vis">
                                   <span className="name-text"></span><span>typing...</span>
                                 </div>
-                              </a>
+                              
                             </div>
                           </div>
-                          <div className="blk-lg-4 move-right">
+                          <div id="mck-btn-video-call" className="mck-videocall-btn  blk-lg-2 n-vis"></div>
+						              <div className="blk-lg-2 move-right">
                             <div id="mck-tab-menu" className="mck-menu-item mck-text-right">
                               <div className="mck-dropdown-toggle" data-toggle="mckdropdown"
                                 aria-expanded="true">
@@ -352,19 +305,19 @@ class Aside extends Component {
                               <ul id="mck-tab-menu-list"
                                 className="mck-dropdown-menu mck-tab-menu-box menu-right"
                                 role="menu">
-                                <li className="mck-tab-message-option vis"><a href="javascript:void(0)"
+                                <li className="mck-tab-message-option vis"><a href="javascript:void(0)" target="_self"
                                   id="mck-delete-button"
                                   className="mck-delete-button menu-item vis"
                                   title="Clear Messages"> Clear Messages </a></li>
-                                <li id="li-mck-block-user" className="vis"><a href="javascript:void(0)"
+                                <li id="li-mck-block-user" className="vis"><a href="javascript:void(0)" target="_self"
                                   id="mck-block-button" className="menu-item" title="Block User">Block
                                     User</a></li>
                                 <li id="li-mck-group-info"
-                                  className="mck-group-menu-options n-vis"><a href="javascript:void(0)"
+                                  className="mck-group-menu-options n-vis"><a href="javascript:void(0)" target="_self"
                                   id="mck-group-info-btn" className="menu-item mck-group-info-btn"
                                   title="Group Info"> Group Info </a></li>
                                 <li id="li-mck-leave-group"
-                                  className="mck-group-menu-options n-vis"><a href="javascript:void(0)"
+                                  className="mck-group-menu-options n-vis"><a href="javascript:void(0)" target="_self"
                                   id="mck-leave-group-btn" className="menu-item" title="Exit Group">
                                     Exit Group </a></li>
                               </ul>
@@ -372,6 +325,21 @@ class Aside extends Component {
 
                           </div>
                         </div>
+
+
+                        <div id="mck-video-call-indicator" className="applozic-launchar n-vis row">
+						        <div id="mck-video-call-icon" className="col-lg-3 mck-alpha-contact-image">
+						            <span className="mck-contact-icon"></span>
+						        </div>
+						        <div id="mck-vid-btn" className="mck-vid-flex-box">
+						           <div id="mck-video-call-indicator-txt" className="mck-video-call-indicator-txt"></div>
+											 <div id="mck-call-btn-div" className= "col-lg-8">
+			 						            <button id="mck-vid-receive-btn" className="mck-btn">Accept</button>
+			 						            <button id="mck-vid-reject-btn" className="mck-btn">Reject</button>
+			 						     </div>
+										 </div>
+
+						</div>
                       </div>
                       <div id="mck-product-group"
                         className="mck-tab-panel mck-btn-group mck-product-group">
@@ -426,15 +394,24 @@ class Aside extends Component {
                           </div>
                         </div>
                       </div>
-                      <div className="write">
+                      <div className="write" >
+                      
                         <div id="mck-sidebox-ft" className="mck-box-ft mck-panel-ft">
-                          <div className="mck-box-form mck-row n-vis">
+                          <div id = "mck-box-form" className="mck-box-form mck-row n-vis">
                             <div className="blk-lg-12">
                               <p id="mck-msg-error" className="mck-sidebox-error n-vis"></p>
                             </div>
                             <div className="blk-lg-12">
                               <p id="mck-msg-response" className="mck-box-response n-vis"></p>
                             </div>
+                            <div  id="mck-reply-to-div" className="n-vis">
+                              <button type="button" id="close" className="mck-box-close mck-close-panel move-right">
+                                 <span aria-hidden="true">&times;</span>
+			      </button>
+				 <div id="mck-reply-to" className=" mck-msgto "></div>
+                                 <div id="mck-reply-msg"> </div>
+                           </div>
+                                        
                             <div id="mck-write-box" className="blk-lg-12 mck-write-box">
                               <form id="mck-msg-form" className="vertical mck-msg-form">
                                 <div className="mck-form-group n-vis">
@@ -447,20 +424,21 @@ class Aside extends Component {
                                 <div id="mck-btn-attach" className="mck-btn-attach">
                                   <div className="mck-dropdown-toggle" data-toggle="mckdropdown"
                                     aria-expanded="true">
-                                    <a href="javascript:void(0)" type="button" id="mck-btn-attach"
+                                    <a href="javascript:void(0)"  target="_self" type="button" id="mck-btn-attach"
                                       className="write-link attach mck-btn-text-panel"
-                                      aria-expanded="true" title="Attach File"> </a>
+                                      aria-expanded="true" title="Attach File">
+                                       </a>
                                   </div>
                                   <ul id="mck-upload-menu-list"
                                     className="mck-dropup-menu mck-upload-menu-list" role="menu">
-                                    <li><a id="mck-file-up" href="javascript:void(0)"
+                                    <li><a id="mck-file-up" href="javascript:void(0)" target="_self"
                                       className="mck-file-upload menu-item" title="File &amp; Photos">
 
                                         <img src="applozic/images/mck-icon-photo.png"
                                         className="menu-icon" alt="File &amp; Photos"/> <span>Files
                                           &amp; Photos</span>
                                     </a></li>
-                                    <li><a id="mck-btn-loc" href="javascript:void(0)" className="menu-item"
+                                    <li><a id="mck-btn-loc" href="javascript:void(0)" target="_self" className="menu-item"
                                       title="Location"> <img
                                         src="applozic/images/mck-icon-marker.png" className="menu-icon"
                                         alt="Location"/> <span>Location</span>
@@ -468,25 +446,43 @@ class Aside extends Component {
 
                                   </ul>
                                 </div>
-                                <a href="javascript:void(0)" id="mck-file-up2" type="button"
-                                  className="write-link attach n-vis mck-file-upload mck-btn-text-panel"
-                                  title="Attach File"> </a> <span id="mck-text-box"
-                                  contentEditable="true" className="mck-text-box mck-text required"></span>
+                                  <a href="javascript:void(0)" target="_self" id="mck-file-up2" type="button"
+                                    className="write-link attach n-vis mck-file-upload mck-btn-text-panel"
+                                    title="Attach File"> </a>
+                                    <a href="javascript:void(0)" target="_self"  id="mck-mike-btn" type="button"
+                                  className="mck-mic-btn mck-mike-btn vis"
+                                  title=" Mic"> </a> 
+                                  <a href="javascript:void(0)" target="_self"  id="stop-recording" 
+                                  className="mck-stop-btn n-vis ">
+                                  </a> 
+                                  <div id="audiodiv" className="mck-mic-timer n-vis">
+							       <label id="mck-minutes">00</label>:<label id="mck-seconds">00</label>
+                                    </div>
+								
+                                  
+                                  <span id="mck-text-box"
+                                  contentEditable="true" suppressContentEditableWarning="true" className="mck-text-box mck-text required"></span>
 
-                                <a href="javascript:void(0)" type="button" id="mck-btn-smiley"
+                                <a href="javascript:void(0)" target="_self" 
+                                
+                                id="mck-msg-sbmt" className="write-link send mck-btn-text-panel"
+                                title="Send Message"></a>
+                                  <a href="javascript:void(0)" target="_self" id="mck-btn-smiley"
                                   className="write-link smiley mck-btn-smiley mck-btn-text-panel"
-                                  title="Smiley"></a> <a href="javascript:void(0)" type="submit"
-                                  id="mck-msg-sbmt" className="write-link send mck-btn-text-panel"
-                                  title="Send Message"></a>
+                                  title="Smiley"></a> 
                               </form>
                             </div>
                             <div className="blk-lg-12">
-                              <div id="mck-file-box" className="n-vis"></div>
+                              <div id="mck-file-box" className=""></div>
                             </div>
                           </div>
                         </div>
                       </div>
                     </div>
+
+
+
+
                   </div>
                   <div id="mck-group-create-tab"
                       className="mck-group-create-tab mck-panel-sm mck-panel n-vis">
@@ -534,7 +530,7 @@ class Aside extends Component {
                                 </div>
                                 <div className="blk-lg-12">
                                   <div id="mck-group-create-title" className="mck-group-create-title mck-group-title"
-                                    contentEditable="true">Group title</div>
+                                    contentEditable="true" suppressContentEditableWarning="true" >Group title</div>
                                 </div>
                               </div>
                             </div>
@@ -595,7 +591,7 @@ class Aside extends Component {
                             </span>
                           </div>
                           <div className="mck-text-center">
-                            <a id="mck-btn-group-icon-save" href="javascript:void(0)" role="link"
+                            <a id="mck-btn-group-icon-save" href="javascript:void(0)" target="_self" role="link"
                               className="mck-btn-group-icon-save n-vis" title="Click to save">
                               <img
                               src="applozic/images/mck-icon-save.png"
@@ -607,13 +603,13 @@ class Aside extends Component {
                           <div id="mck-group-name-box" className="mck-row mck-group-name-box">
                             <div className="blk-lg-9">
                               <div id="mck-group-title" className="mck-group-title"
-                                contentEditable="false">Group title</div>
+                                contentEditable="false" suppressContentEditableWarning="true" >Group title</div>
                             </div>
                             <div className="blk-lg-3 mck-group-name-edit-icon">
-                              <a id="mck-group-name-edit" href="javascript:void(0)" role="link"
+                              <a id="mck-group-name-edit" href="javascript:void(0)" target="_self" role="link"
                                 className="mck-group-name-edit vis" title="Edit"> <img
                                 src="applozic/images/mck-icon-write.png" alt="Edit"/></a> <a
-                                id="mck-group-name-save" href="javascript:void(0)" role="link"
+                                id="mck-group-name-save" href="javascript:void(0)"  target="_self" role="link"
                                 className="mck-group-name-save n-vis" title="Click to save"> <img
                                 src="applozic/images/mck-icon-save.png" alt="Save"/></a>
                             </div>
@@ -626,7 +622,7 @@ class Aside extends Component {
                             <div id="mck-group-add-member-box"
                               className="mck-row mck-group-admin-options mck-group-add-member-box n-vis">
                               <a id="mck-group-add-member" className="mck-group-add-member"
-                                href="javascript:void(0)">
+                                href="javascript:void(0)"target="_self" >
                                 <div className="blk-lg-3">
                                   <img src="applozic/images/mck-icon-add-member.png"
                                     alt="Add Member"/>
@@ -646,6 +642,15 @@ class Aside extends Component {
                           </div>
                         </div>
                       </div>
+                      <div id="mck-group-update-panel" className="mck-tab-panel mck-group-update-panel n-vis">
+						<div className="mck-group-bottom-sec">
+							<div className="mck-row mck-group-update-sec">
+								<button type="button" id="mck-btn-group-update"
+									className="mck-btn mck-btn-green mck-btn-group-update"
+									title="Update">Update</button>
+							</div>
+						</div>
+					</div>
                       <div id="mck-group-info-ft" className="mck-group-info-ft">
                         <button type="button" id="mck-btn-group-exit"
                           className="mck-btn mck-btn-blue mck-btn-group-exit"
@@ -653,76 +658,8 @@ class Aside extends Component {
                       </div>
                     </div>
                   </div>
-                  <div id="mck-user-info-tab"
-                    className="mck-user-info-tab mck-panel-sm mck-panel n-vis">
-                    <div className="panel-content">
-                      <div className="mck-box-top">
-                        <div className="blk-lg-10">
-                          <div className="mck-box-title mck-truncate" title="User Info">User
-                            Info</div>
-                        </div>
-                        <div className="blk-lg-2">
-                          <button type="button" id="mck-user-info-close"
-                            className="mck-box-close mck-close-panel move-right">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div>
-                      </div>
-                      <div id="mck-user-detail-panel" className="mck-user-detail-box">
-                        <div className="mck-user-icon-sec">
-                          <div id="mck-user-info-icon-box"
-                            className="mck-user-icon-box mck-user-info-icon-box mck-hover-on">
-                            <div className="mck-user-icon">
-                              <img src="" />
-                            </div>
-                            <span className="mck-overlay-box n-vis">
-                              <div className="mck-overlay">
-                                <span className="mck-camera-icon"></span> <span
-                                  className="mck-overlay-label">Change Profile Picture</span>
-                              </div>
-                              <div id="mck-user-info-icon-loading" className="mck-loading n-vis">
-                                <img src="applozic/images/mck-loading.gif"/>
-                              </div> <input id="mck-user-icon-change"
-                              className="mck-user-icon-change n-vis" type="file" name="file[]" />
-                            </span>
-                          </div>
-                          <div className="mck-text-center">
-                            <a id="mck-btn-user-icon-save" href="javascript:void(0)" role="link"
-                              className="mck-btn-user-icon-save n-vis" title="Click to save">
-                              <img
-                              src="applozic/images/mck-icon-save.png"
-                              alt="Save"/>
-                            </a>
-                          </div>
-                        </div>
-                        <div id="mck-user-name-sec" className="mck-user-name-sec">
-                          <div id="mck-user-name-box" className="mck-row mck-user-name-box">
-                            <div className="blk-lg-9">
-                              <div id="mck-user-title" className="mck-user-title"
-                                contentEditable="false">User title</div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="mck-box-body">
-                        <div className="mck-tab-cell">
-                          <div className="mck-user-info-inner">
-                            <ul id="mck-user-info-list"
-                              className="mck-user-info-list mck-nav mck-nav-tabs mck-nav-stacked">
-                              <li className="email"></li>
-                              <li className="bio"></li>
-                              <li className="title"></li>
-                              <li className="company"></li>
-                              <li className="location"></li>
-                              <li className="profile-linkedin"><a className="linkedin" href=""></a></li>
-                            </ul>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
 
+                  </div>
 
                 <div id="mck-loc-box" className="mck-box mck-loc-box fade"
                   aria-hidden="false">
@@ -740,7 +677,7 @@ class Aside extends Component {
                         </div>
                       </div>
                       <div className="mck-box-body">
-                        <div className="mck-form-group">
+                        <div className="mck-form-group ">
                           <div className="blk-lg-12">
                             <input id="mck-loc-address" type="text" className="mck-form-control"
                               placeholder="Enter a location" autoComplete="off"/>
@@ -788,11 +725,11 @@ class Aside extends Component {
                       <div id="mck-search-tab-box" className="mck-search-tab-box mck-row">
                         <div className="blk-lg-12">
                           <ul className="mck-nav mck-nav-panel">
-                            <li className="mck-nav-item mck-nav-divider"><a
-                              id="mck-contact-search-tab"
-                              className="mck-nav-link mck-contact-search active" a href="javascript:void(0)" ><strong>Contacts</strong></a></li>
+                            <li className="mck-nav-item mck-nav-divider">
+                            <a id="mck-contact-search-tab"
+                              className="mck-nav-link mck-contact-search active" href="javascript:void(0)" target="_self" ><strong>Contacts</strong></a></li>
                             <li className="mck-nav-item"><a id="mck-group-search-tab"
-                              className="mck-nav-link mck-group-search" a href="javascript:void(0)" ><strong>Groups</strong></a>
+                              className="mck-nav-link mck-group-search" href="javascript:void(0)" target="_self" ><strong>Groups</strong></a>
                             </li>
                           </ul>
                         </div>
@@ -802,7 +739,7 @@ class Aside extends Component {
                           <div id="mck-contact-search-input-box"
                             className="blk-lg-12">
                             <input id="mck-contact-search-input" type="text"
-                              data-provide="typeahead" placeholder="Search..." autofocus /> <span
+                              data-provide="typeahead" placeholder="Search..."  /> <span
                               className="mck-search-icon"><a href="#" role="link"
                               className="mck-contact-search-link" target="_self"><span
                                 className="mck-icon-search"></span></a></span>
@@ -810,7 +747,7 @@ class Aside extends Component {
                           <div id="mck-group-search-input-box"
                             className="mck-input-group blk-lg-12 n-vis">
                             <input id="mck-group-search-input" type="text"
-                              data-provide="typeahead" placeholder="Search..." autofocus /> <span
+                              data-provide="typeahead" placeholder="Search..."  /> <span
                               className="mck-search-icon"><a href="#" role="link"
                               className="mck-group-search-link" target="_self"><span className="mck-icon-search"></span></a></span>
                           </div>
@@ -859,8 +796,8 @@ class Aside extends Component {
                         <div className="mck-form-group">
                           <div className="mck-input-group blk-lg-12">
                             <input id="mck-group-member-search" type="text" data-provide="typeahead"
-                              placeholder="Search..." autoFocus /> <span
-                              className="mck-search-icon"><a href="javascript:void(0)" role="link"
+                              placeholder="Search..."  /> <span
+                              className="mck-search-icon"><a href="javascript:void(0)" target="_self" role="link"
                               className="mck-group-member-search-link"><span className="mck-icon-search"></span></a></span>
                           </div>
                         </div>

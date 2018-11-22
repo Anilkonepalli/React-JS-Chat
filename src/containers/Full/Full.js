@@ -9,8 +9,11 @@ import Footer from '../../components/Footer/';
 import Dashboard from '../../views/Dashboard/'
 import Conversations from '../../views/Conversations/'
 import LoggedInAuthentication from  '../../views/Pages/Login/Login.js'
+
+
 class Full extends Component {
 
+  
   componentDidMount() {
     /*if(localStorage.getItem("loggedinUser") === null){
       window.location = "/#/login";
@@ -21,6 +24,15 @@ class Full extends Component {
       window.chatLogin();
     }
   }
+  /*componentWillMount(){
+    if(localStorage.loggedinUser !== 'undefined'){
+      console.log("userloggedin initializng chat");
+      window.chatLogin();
+
+    }
+  }
+*/
+
    checkLogin() {
     var loggedIn = false;
     if (!localStorage.getItem('loggedinUser')) {

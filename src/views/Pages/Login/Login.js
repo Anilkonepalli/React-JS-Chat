@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
+import  '../../../components/Aside/Aside.js';
 import axios from 'axios';
 import validator from 'validator';
 import {Modal} from 'react-bootstrap';
 import  {Button}  from 'react-bootstrap';
 import Dropdown from 'react-dropdown';
 import {SplitButton, MenuItem} from 'react-bootstrap';
-
 
 
 class Login extends Component {
@@ -22,6 +22,7 @@ this.handleClick = this.handleClick.bind(this);
 
    componentWillMount(){
     if(localStorage.getItem("loggedinUser")){
+      console.log("Login page");
         window.location="/#/dashboard";
     }
    }
@@ -34,6 +35,8 @@ this.handleClick = this.handleClick.bind(this);
    localStorage.setItem("loggedinUser", userId);
    localStorage.setItem("applicationId", applicationKey);
    localStorage.setItem("password",password);
+   console.log("Login page udesr");
+
    window.location="/#/dashboard";
 
         }
