@@ -7,7 +7,13 @@ import { createBrowserHistory } from 'history';
 import Full from './containers/Full/'
 
 // Views
+
+
+import  './components/Aside/Aside.js';
+
+
 import Login from './views/Pages/Login/'
+
 
 const history = createBrowserHistory();
 

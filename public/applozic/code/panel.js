@@ -1,12 +1,12 @@
-$(document).ready(function() {
+jQuery(document).ready(function() {
 
-    $("#login-modal").mckModal('show');
+    jQuery("#login-modal").mckModal('show');
 
-    $(".mck-group-search").on('click', function(e) {
+    jQuery(".mck-group-search").on('click', function(e) {
         $("#mck-customers-cell-link").trigger('click');
     });
 
-    $("#mck-user-info-close").on('click', function(e) {
+    jQuery("#mck-user-info-close").on('click', function(e) {
         e.preventDefault();
         $applozic("#mck-user-info-tab").removeClass('vis').addClass('n-vis');
         $applozic(".mck-container").removeClass('mck-panel-3');
@@ -14,7 +14,7 @@ $(document).ready(function() {
         $applozic('body').removeClass('mck-panel-3');
     });
 
-    $("#applozic-panel-tabs li a").on('click', function(e) {
+    jQuery("#applozic-panel-tabs li a").on('click', function(e) {
         var $this = $(this);
         $("#applozic-panel-tabs li").toggleClass('active');
         $("#applozic-panel-body .mck-panel-cell").removeClass('vis').addClass('n-vis');
@@ -25,11 +25,11 @@ $(document).ready(function() {
         }
     });
 
-    $(document).on('click', '#mck-new-group', function(event) {
+    jQuery(document).on('click', '#mck-new-group', function(event) {
         $('.mck-user-info-tab').removeClass("vis").addClass('n-vis');
     });
 
-    $(document).on('click', '.mck-group-member-list li, #mck-tab-info-individual', function (event) {
+    jQuery(document).on('click', '.mck-group-member-list li, #mck-tab-info-individual', function (event) {
         $('.mck-group-info-tab').removeClass("vis").addClass('n-vis');
         if ($('.mck-user-info-tab').hasClass('n-vis')) {
           $applozic('body').removeClass('mck-panel-3').addClass('mck-panel-3');
@@ -68,7 +68,7 @@ $(document).ready(function() {
             });
     });
 
-	$(".side-nav li a").click(function() {
+	jQuery(".side-nav li a").click(function() {
 		var $this = $(this);
         if ($this.parent().hasClass('active')) {
             return;
