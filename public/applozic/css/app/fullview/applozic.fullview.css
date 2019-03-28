@@ -43,18 +43,18 @@
     text-align: left;
 }
 .mck-videocall-btn {
-    background-image: url(../../../images/mck-videocall-icon.png);
+        background-image: url(../../../images/mck-videocall-icon.png);
     background-repeat: no-repeat;
-    margin-top: 8px;
-    position: absolute;
+        margin-top: 8px;
+        position: absolute;
     overflow: hidden;
-    opacity: 0.4;
-    background-size: 20px;
-    cursor: pointer;
+        opacity: 0.4;
+        background-size: 20px;
+        cursor: pointer;
 }
 
 .mck-videocall-image {
-    cursor: pointer;
+        cursor: pointer;
     float: left;
     width: 50px;
     height: 55px;
@@ -88,8 +88,8 @@
 }
 
 .mck-verticalline {
-    border-left: thick solid white;
-    border-left-width: medium;
+  border-left: thick solid white;
+  border-left-width: medium;
 }
 
 
@@ -107,27 +107,27 @@
 }
 
 .mck-mike-btn {
-    background-image: url(../../../images/mck-mic.png);
-    background-repeat: no-repeat;
-    float :left !important;
-    height:18px;
-    width:19px;
-    overflow: hidden;
-    background-size: 20px;
-    cursor: pointer;
-    filter:grayscale(100%);
-    opacity: .5;
+        background-image: url(../../../images/mck-mic.png);
+        background-repeat: no-repeat;
+        float :left !important;
+        height:18px;
+        width:19px;
+            overflow: hidden;
+        background-size: 20px;
+        cursor: pointer;
+                filter:grayscale(100%);
+                opacity: .5;
 }
 .mck-stop-btn {
-    background-image: url(../../../images/mck-stop.png);
-    background-repeat: no-repeat;
-    float :left !important;
-    margin-top: 7px;
-    height:27px;
-    width:25px;
-    overflow: hidden;
-    background-size: 25px;
-    cursor: pointer;
+        background-image: url(../../../images/mck-stop.png);
+        background-repeat: no-repeat;
+        float :left !important;
+        margin-top: 7px;
+        height:27px;
+        width:25px;
+        overflow: hidden;
+        background-size: 25px;
+        cursor: pointer;
 }
 
 .mck-mic-timer {
@@ -300,12 +300,12 @@
 }
 
 .mck-sidebox .n-vis, .mck-sidebox .hide, .mck-sidebox-launcher .n-vis,
-.mck-sidebox-launcher.n-vis, .mck-msg-preview.n-vis, .n-vis {
+    .mck-sidebox-launcher.n-vis, .mck-msg-preview.n-vis, .n-vis {
     display: none !important;
 }
 
 .mck-box .vis, .mck-box .show, .mck-sidebox-launcher .vis,
-.mck-sidebox-launcher.vis, .mck-msg-preview.vis {
+    .mck-sidebox-launcher.vis, .mck-msg-preview.vis {
     display: block !important;
 }
 
@@ -349,7 +349,7 @@ a:hover {
 }
 
 .mck-sidebox button, .mck-sidebox input, .mck-sidebox optgroup,
-.mck-sidebox select, .mck-sidebox textarea {
+    .mck-sidebox select, .mck-sidebox textarea {
     margin: 0;
     font: inherit;
     color: inherit;
@@ -364,7 +364,7 @@ a:hover {
 }
 
 .mck-sidebox button, .mck-sidebox input[type=button], .mck-sidebox input[type=reset],
-.mck-sidebox input[type=submit] {
+    .mck-sidebox input[type=submit] {
     -webkit-appearance: button;
     cursor: pointer;
 }
@@ -378,7 +378,7 @@ a:hover {
 }
 
 .mck-sidebox button, .mck-box input, .mck-box select, .mck-box textarea
-{
+    {
     font-family: inherit;
     font-size: inherit;
     line-height: inherit;
@@ -426,7 +426,7 @@ a:hover {
 }
 
 .mck-sidebox .progress-bar-striped, .mck-sidebox .progress-striped,
-.mck-sidebox .progress-bar {
+    .mck-sidebox .progress-bar {
     background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15)
         25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%,
         rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
@@ -453,7 +453,7 @@ a:hover {
 }
 
 .mck-sidebox .progress-bar.active, .mck-sidebox .progress.active .progress-bar
-{
+    {
     -webkit-animation: progress-bar-stripes 2s linear infinite;
     -o-animation: progress-bar-stripes 2s linear infinite;
     animation: progress-bar-stripes 2s linear infinite;
@@ -508,20 +508,20 @@ a:hover {
 }
 
 .mck-btn-blue.active, .mck-btn-blue.focus, .mck-btn-blue:active,
-.mck-btn-blue:focus, .mck-btn-blue:hover, .mck-box .open>.dropdown-toggle.mck-btn-blue
-{
+    .mck-btn-blue:focus, .mck-btn-blue:hover, .mck-box .open>.dropdown-toggle.mck-btn-blue
+    {
     color: #fff;
     background-color: #286090;
     border-color: #204d74;
 }
 
 .mck-btn-blue.active, .mck-btn-blue:active, .mck-box .open>.mck-dropdown-toggle.mck-btn-blue
-{
+    {
     background-image: none;
 }
 
 .mck-btn.active.focus, .mck-btn.active:focus, .mck-btn.focus, .mck-btn:active.focus,
-.mck-btn:active:focus, .mck-btn:focus {
+    .mck-btn:active:focus, .mck-btn:focus {
     outline: thin dotted;
     outline: 5px auto -webkit-focus-ring-color;
     outline-offset: -2px;
@@ -655,13 +655,13 @@ a:hover {
 }
 
 .mck-box.in .mck-left, .mck-box.in .mck-right, .mck-box.in .mck-top,
-.mck-box.in .mck-bottom {
+    .mck-box.in .mck-bottom {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
 
 .mck-sidebox h1, .mck-sidebox h2, .mck-sidebox h3, .mck-sidebox h4,
-.mck-sidebox h5, .mck-sidebox h6 {
+    .mck-sidebox h5, .mck-sidebox h6 {
     font-weight: 300 !important;
 }
 
@@ -925,8 +925,8 @@ a:hover {
 }
 
 .mck-sidebox .mck-btn-green.active, .mck-sidebox .mck-btn-green.focus,
-.mck-sidebox .mck-btn-green:active, .mck-sidebox .mck-btn-green:focus,
-.mck-sidebox .mck-btn-green:hover {
+    .mck-sidebox .mck-btn-green:active, .mck-sidebox .mck-btn-green:focus,
+    .mck-sidebox .mck-btn-green:hover {
     color: #fff;
     background-color: #449d44;
     border-color: #398439;
@@ -990,27 +990,27 @@ ol, ul {
 }
 
 .mck-box .btn-group-vertical>.btn-group:after, .mck-box .btn-group-vertical>.btn-group:before,
-.mck-box .btn-toolbar:after, .mck-box .btn-toolbar:before, .mck-sidebox .clearfix:after,
-.mck-box .clearfix:before, .mck-box .container-fluid:after, .mck-box .container-fluid:before,
-.mck-box .container:after, .mck-box .container:before, .mck-box .dl-horizontal dd:after,
-.mck-box .dl-horizontal dd:before, .mck-box .mck-form-group:after,
-.mck-box .mck-form-group:before, .mck-box .mck-box-ft:after, .mck-box .mck-box-ft:before,
-.mck-box .nav:after, .mck-box .nav:before, .mck-box .navbar-collapse:after,
-.mck-box .navbar-collapse:before, .mck-box .navbar-header:after,
-.mck-box .navbar-header:before, .mck-box .navbar:after, .mck-box .navbar:before,
-.mck-box .pager:after, .mck-box .pager:before, .mck-box .panel-body:after,
-.mck-box .panel-body:before, .mck-box .mck-row:after, .mck-box .mck-row:before
-{
+    .mck-box .btn-toolbar:after, .mck-box .btn-toolbar:before, .mck-sidebox .clearfix:after,
+    .mck-box .clearfix:before, .mck-box .container-fluid:after, .mck-box .container-fluid:before,
+    .mck-box .container:after, .mck-box .container:before, .mck-box .dl-horizontal dd:after,
+    .mck-box .dl-horizontal dd:before, .mck-box .mck-form-group:after,
+    .mck-box .mck-form-group:before, .mck-box .mck-box-ft:after, .mck-box .mck-box-ft:before,
+    .mck-box .nav:after, .mck-box .nav:before, .mck-box .navbar-collapse:after,
+    .mck-box .navbar-collapse:before, .mck-box .navbar-header:after,
+    .mck-box .navbar-header:before, .mck-box .navbar:after, .mck-box .navbar:before,
+    .mck-box .pager:after, .mck-box .pager:before, .mck-box .panel-body:after,
+    .mck-box .panel-body:before, .mck-box .mck-row:after, .mck-box .mck-row:before
+    {
     display: table;
     content: " ";
 }
 
 .btn-group-vertical>.btn-group:after, .btn-toolbar:after, .mck-box  .clearfix:after,
-.mck-box .container-fluid:after, .mck-box .container:after, .mck-box .dl-horizontal dd:after,
-.mck-box .form-horizontal .mck-form-group:after, .mck-sidebox-ft :after,
-.mck-box .nav:after, .mck-box  .navbar-collapse:after, .mck-box  .navbar-header:after,
-.mck-box  .navbar:after, .mck-sidebox  .pager:after, .mck-box  .panel-body:after,
-.mck-row:after {
+    .mck-box .container-fluid:after, .mck-box .container:after, .mck-box .dl-horizontal dd:after,
+    .mck-box .form-horizontal .mck-form-group:after, .mck-sidebox-ft :after,
+    .mck-box .nav:after, .mck-box  .navbar-collapse:after, .mck-box  .navbar-header:after,
+    .mck-box  .navbar:after, .mck-sidebox  .pager:after, .mck-box  .panel-body:after,
+    .mck-row:after {
     clear: both;
 }
 
@@ -1046,25 +1046,25 @@ ol, ul {
 }
 
 .mck-contact-list li .blk-lg-3, .mck-sidebox-launcher .blk-lg-3,
-.mck-contact-list li .blk-lg-9, .mck-sidebox-launcher .blk-lg-9,
-.mck-contact-list li .blk-lg-12, .mck-contact-list li .blk-lg-8 {
+    .mck-contact-list li .blk-lg-9, .mck-sidebox-launcher .blk-lg-9,
+    .mck-contact-list li .blk-lg-12, .mck-contact-list li .blk-lg-8 {
     padding: 0;
 }
 
 .mck-box .blk-lg-1, .mck-box .blk-lg-10, .mck-box .blk-lg-11, .mck-box .blk-lg-12,
-.mck-box .blk-lg-2, .mck-box .blk-lg-3, .mck-sidebox-launcher .blk-lg-3,
-.mck-box .blk-lg-4, .mck-box .blk-lg-5, .mck-box  .blk-lg-6, .mck-box .blk-lg-7,
-.mck-box .blk-lg-8, .mck-box .blk-lg-9, .mck-sidebox-launcher .blk-lg-9,
-.mck-box .blk-md-1, .mck-box .blk-md-10, .mck-box .blk-md-11, .mck-box .blk-md-12,
-.mck-box .blk-md-2, .mck-box .blk-md-3, .mck-box .blk-md-4, .mck-box .blk-md-5,
-.mck-box .blk-md-6, .mck-box .blk-md-7, .mck-box .blk-md-8, .mck-box .blk-md-9,
-.mck-box .blk-sm-1, .mck-box .blk-sm-10, .mck-box .blk-sm-11, .mck-box .blk-sm-12,
-.mck-box .blk-sm-2, .mck-box .blk-sm-3, .mck-box .blk-sm-4, .mck-box .blk-sm-5,
-.mck-box .blk-sm-6, .mck-box .blk-sm-7, .mck-box .blk-sm-8, .mck-box .blk-sm-9,
-.mck-box .blk-xs-1, .mck-box .blk-xs-10, .mck-box .blk-xs-11, .mck-box .blk-xs-12,
-.mck-box .blk-xs-2, .mck-box .blk-xs-3, .mck-box .blk-xs-4, .mck-box .blk-xs-5,
-.mck-box .blk-xs-6, .mck-box .blk-xs-7, .mck-box .blk-xs-8, .mck-box .blk-xs-9
-{
+    .mck-box .blk-lg-2, .mck-box .blk-lg-3, .mck-sidebox-launcher .blk-lg-3,
+    .mck-box .blk-lg-4, .mck-box .blk-lg-5, .mck-box  .blk-lg-6, .mck-box .blk-lg-7,
+    .mck-box .blk-lg-8, .mck-box .blk-lg-9, .mck-sidebox-launcher .blk-lg-9,
+    .mck-box .blk-md-1, .mck-box .blk-md-10, .mck-box .blk-md-11, .mck-box .blk-md-12,
+    .mck-box .blk-md-2, .mck-box .blk-md-3, .mck-box .blk-md-4, .mck-box .blk-md-5,
+    .mck-box .blk-md-6, .mck-box .blk-md-7, .mck-box .blk-md-8, .mck-box .blk-md-9,
+    .mck-box .blk-sm-1, .mck-box .blk-sm-10, .mck-box .blk-sm-11, .mck-box .blk-sm-12,
+    .mck-box .blk-sm-2, .mck-box .blk-sm-3, .mck-box .blk-sm-4, .mck-box .blk-sm-5,
+    .mck-box .blk-sm-6, .mck-box .blk-sm-7, .mck-box .blk-sm-8, .mck-box .blk-sm-9,
+    .mck-box .blk-xs-1, .mck-box .blk-xs-10, .mck-box .blk-xs-11, .mck-box .blk-xs-12,
+    .mck-box .blk-xs-2, .mck-box .blk-xs-3, .mck-box .blk-xs-4, .mck-box .blk-xs-5,
+    .mck-box .blk-xs-6, .mck-box .blk-xs-7, .mck-box .blk-xs-8, .mck-box .blk-xs-9
+    {
     position: relative;
     min-height: 1px;
 }
@@ -1188,7 +1188,7 @@ ol, ul {
 }
 
 .mck-dropdown-menu:after, .mck-dropdown-menu:before, .mck-dropup-menu:after,
-.mck-dropup-menu:before {
+    .mck-dropup-menu:before {
     right: auto;
     position: absolute;
     display: inline-block !important;
@@ -1208,7 +1208,7 @@ ol, ul {
 }
 
 .mck-dropdown-menu li>a, .mck-dropup-menu li>a, .mck-dropdown-menu .mck-dropdown-link,
-.mck-context-menu li>a {
+    .mck-context-menu li>a {
     clear: both;
     color: #419ab1 !important;
     cursor: pointer;
@@ -1245,21 +1245,21 @@ ol, ul {
 }
 
 .mck-dropdown-menu>li>a:focus, .mck-dropup-menu>li>a:focus, .mck-sidebox .mck-group-member-list .mck-dropdown-menu>li>a:focus,
-.mck-dropdown-menu>li>a:hover, .mck-dropup-menu>li>a:hover,
-.mck-sidebox .mck-group-member-list .mck-dropdown-menu>li>a:hover,
-.mck-context-menu li>a:hover, .mck-context-menu li>a:focus {
+    .mck-dropdown-menu>li>a:hover, .mck-dropup-menu>li>a:hover,
+    .mck-sidebox .mck-group-member-list .mck-dropdown-menu>li>a:hover,
+    .mck-context-menu li>a:hover, .mck-context-menu li>a:focus {
     color: #262626 !important;
     text-decoration: none;
     background-color: #f5f5f5 !important;
 }
 
 .mck-contact-list li:last-child a, .mck-group-member-list li:last-child .mck-group-member-info
-{
+    {
     border-bottom: 0 !important;
 }
 
 .mck-box .mck-contact-list li a:hover, mck-sidebox .mck-group-member-list li a:hover
-{
+    {
     text-decoration: none;
 }
 
@@ -1414,7 +1414,7 @@ ol, ul {
 }
 
 .mck-blk-2.mck-text-box-panel .mck-btn:hover, .mck-blk-2.mck-text-box-panel .mck-btn:focus
-{
+    {
     outline: none;
 }
 
@@ -1450,7 +1450,7 @@ ol, ul {
 }
 
 .mck-sidebox .mck-btn-smiley:active, .mck-sidebox .mck-btn-smiley:focus
-{
+    {
     box-shadow: none;
     border: 0 !important;
     outline: none !important;
@@ -1646,7 +1646,7 @@ ol, ul {
 }
 
 .mck-msg-avator-bubble.mck-msg-left .mck-msg-box:after,
-.mck-msg-avator-bubble.mck-msg-left .mck-msg-box:before {
+    .mck-msg-avator-bubble.mck-msg-left .mck-msg-box:before {
     right: calc(100% - 58px);
 }
 
@@ -1658,7 +1658,7 @@ ol, ul {
 }
 
 .mck-msg-avator-bubble.mck-msg-right .mck-msg-box:after,
-.mck-msg-avator-bubble.mck-msg-right .mck-msg-box:before {
+    .mck-msg-avator-bubble.mck-msg-right .mck-msg-box:before {
     left: calc(100% - 58px);
 }
 
@@ -1673,7 +1673,7 @@ ol, ul {
 }
 
 .mck-msg-left .mck-msg-box:after, .mck-msg-left .mck-msg-box:before,
-.mck-msg-right .mck-msg-box:after, .mck-msg-right .mck-msg-box:before {
+    .mck-msg-right .mck-msg-box:after, .mck-msg-right .mck-msg-box:before {
     border: solid transparent;
     content: " ";
     pointer-events: none;
@@ -1770,7 +1770,7 @@ ol, ul {
 }
 
 .mck-contact-list li .col-lg-3, .mck-contact-list li .col-lg-9,
-.mck-contact-list li .col-lg-12, .mck-contact-list li .col-lg-8 {
+    .mck-contact-list li .col-lg-12, .mck-contact-list li .col-lg-8 {
     padding: 0;
 }
 .mck-msg-avator {
@@ -1778,7 +1778,7 @@ ol, ul {
 }
 
 .mck-contact-list .mck-alpha-contact-image, .mck-msg-avator .mck-alpha-contact-image
-{
+    {
     border-radius: 110px;
 }
 
@@ -2199,7 +2199,7 @@ ol, ul {
 }
 
 .mck-contact-list li a .blk-lg-3 img, .mck-group-member-list li .blk-lg-3 img
-{
+    {
     height: 40px;
     width: 40px;
     border-radius: 110px;
@@ -2418,7 +2418,7 @@ ol, ul {
 }
 
 .mck-nav-tabs>li.active>a, .mck-nav-tabs>li.active>a:focus,
-.mck-nav-tabs>li.active>a:hover {
+    .mck-nav-tabs>li.active>a:hover {
     color: #555;
     cursor: default;
 }
@@ -2452,7 +2452,7 @@ ol, ul {
 }
 
 .mck-tab-info, .mck-tab-info:hover, .mck-tab-info:active, .mck-tab-info:focus
-{
+    {
     color: #333;
     text-decoration: none;
 }
@@ -2897,7 +2897,7 @@ ol, ul {
 }
 
 .mck-group-add-member-box img, .mck-sm-modal-box .mck-box-top .blk-lg-3 img
-{
+    {
     width: 20px;
     height: 20px;
     display: block;
@@ -2970,7 +2970,7 @@ ol, ul {
 }
 
 .mck-btn-green.active, .mck-btn-green.focus, .mck-btn-green:active,
-.mck-btn-green:focus, .mck-btn-green:hover {
+    .mck-btn-green:focus, .mck-btn-green:hover {
     color: #fff;
     background-color: #449d44;
     border-color: #398439;
@@ -3120,12 +3120,12 @@ ol, ul {
 }
 
 .mck-icon-user, .mck-icon-no-image, .mck-icon-loading, .mck-icon-bell,
-.mck-icon-dollar, .mck-icon-smiley, .mck-icon-sun, .mck-icon-truck,
-.mck-icon-send, .mck-icon-smiley-blue, .mck-icon-upload,
-.mck-icon-search, .mck-icon-chat, .mck-icon-backward,
-.mck-icon-marker-blue, .mck-icon-photo, .mck-icon-attachment,
-.mck-icon-camera, .mck-icon-marker, .mck-icon-delivered, .mck-icon-read,
-.mck-icon-sent, .mck-icon-time {
+    .mck-icon-dollar, .mck-icon-smiley, .mck-icon-sun, .mck-icon-truck,
+    .mck-icon-send, .mck-icon-smiley-blue, .mck-icon-upload,
+    .mck-icon-search, .mck-icon-chat, .mck-icon-backward,
+    .mck-icon-marker-blue, .mck-icon-photo, .mck-icon-attachment,
+    .mck-icon-camera, .mck-icon-marker, .mck-icon-delivered, .mck-icon-read,
+    .mck-icon-sent, .mck-icon-time {
     display: inline-block;
     background: url(../../../images/mck-plugin-sprite.png) no-repeat;
     overflow: hidden;
@@ -3333,9 +3333,9 @@ ol, ul {
         margin: 60px auto;
     }
     .blk-lg-1, .mck-box  .blk-lg-10, .mck-box  .blk-lg-11, .mck-box  .blk-lg-12,
-    .mck-box  .blk-lg-2, .mck-box  .blk-lg-3, .mck-box  .blk-lg-4,
-    .mck-box  .blk-lg-5, .mck-box  .blk-lg-6, .mck-box  .blk-lg-7,
-    .mck-box  .blk-lg-8, .mck-box  .blk-lg-9, .mck-msg-preview .blk-lg-9 {
+        .mck-box  .blk-lg-2, .mck-box  .blk-lg-3, .mck-box  .blk-lg-4,
+        .mck-box  .blk-lg-5, .mck-box  .blk-lg-6, .mck-box  .blk-lg-7,
+        .mck-box  .blk-lg-8, .mck-box  .blk-lg-9, .mck-msg-preview .blk-lg-9 {
         float: left;
     }
     .mck-contact-list .blk-lg-3 {
@@ -3348,7 +3348,7 @@ ol, ul {
         width: 230px;
     }
     .mck-sidebox-search .mck-box-top .blk-lg-8, .mck-group-info-tab .mck-box-top .blk-lg-8
-    {
+        {
         width: 250px;
     }
     .mck-group-member-list .blk-lg-10 {
@@ -3511,10 +3511,10 @@ ol, ul {
     height: 100%;
 }
 #local-media{
-    /* background-color:blue;*/
+  /* background-color:blue;*/
     /*border:solid;*/
     width:30%;
-    /* height: 100%;*/
+   /* height: 100%;*/
     margin-bottom:2%;
     display:inline-block;
 }
@@ -3559,8 +3559,8 @@ ol, ul {
     top:0;
 }
 .mck-aud-muted-btn{
-    background-color:red;
-}
+        background-color:red;
+        }
 #mck-vid-disconnect{
     border-radius: 50%;
     height:56Px;
@@ -3581,7 +3581,7 @@ ol, ul {
 .mck-centered{
     margin:0 auto;
     float:none;
-    white-space:nowrap;
+        white-space:nowrap;
 }
 .mck-unmute-icon{
     fill:white;
@@ -3599,13 +3599,13 @@ ol, ul {
     background-color:black !important;
 }
 .mck-disconnect-icon{
-    fill:white;
+fill:white;
 }
 #mck-call-indicator-header{
 
 }
 #mck-call-btn-div{
-    width:65%;
+width:65%;
 }
 #mck-vid-receive-btn, #mck-vid-reject-btn{
     width:40%;
@@ -3635,18 +3635,18 @@ ol, ul {
     border:solid;
 }
 .mck-badge-count {
-    width: auto;
-    height: 20px;
-    border-radius: 50px;
-    background-color: red;
-    text-align: center;
-    color: white;
-    position: absolute;
-    top: 0;
-    line-height: 20px;
-    font-size: 16px;
-    padding: 0 5px;
-    z-index: 2243001
+  width: auto;
+  height: 20px;
+  border-radius: 50px;
+  background-color: red;
+  text-align: center;
+  color: white;
+  position: absolute;
+  top: 0;
+  line-height: 20px;
+  font-size: 16px;
+  padding: 0 5px;
+  z-index: 2243001
 }
 .mck-text-box-width-increase {
     width : calc(100% - 75px) !important;
@@ -3655,4 +3655,29 @@ ol, ul {
 .mck-msg-box{
     text-align: left;
 }
-    
+
+.mck-container .left .people .person .name {
+    width: calc(100% - 75px) !important;
+}
+
+.mck-container .left .people .person .time  {
+    width: 75px !important; 
+}
+
+.mck-icon--camera {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.mck-icon--camera svg {
+    vertical-align: sub
+}
+
+.mck-attachement-icon, .mck-icon--video {
+    margin-right: 5px;
+}
+.mck-attachement-icon svg {
+    vertical-align: bottom;
+}
+.mck-icon--video svg, .mck-icon-video-text{
+    vertical-align: middle;
+}
