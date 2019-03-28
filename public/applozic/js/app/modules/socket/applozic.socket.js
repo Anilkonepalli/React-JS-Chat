@@ -8,15 +8,15 @@
         ALSocket.stompClient = null;
         var TYPING_TAB_ID = '';
         ALSocket.typingSubscriber = null;
-        var openGroupSubscriber = [];
+        ALSocket.openGroupSubscriber = [];
         var checkConnectedIntervalId;
         var sendConnectedStatusIntervalId;
-        var OPEN_GROUP_SUBSCRIBER_MAP;
+        var OPEN_GROUP_SUBSCRIBER_MAP=[];
         ALSocket.mck_typing_status = 0;
         var MCK_TYPING_STATUS;
         var SOCKET = '';
-        var MCK_WEBSOCKET_URL = 'https://apps.applozic.com';
-        var MCK_WEBSOCKET_PORT = "15675";
+        var MCK_WEBSOCKET_URL = 'https://socket.applozic.com';
+        var MCK_WEBSOCKET_PORT = "80";
         ALSocket.MCK_TOKEN;
         ALSocket.USER_DEVICE_KEY;
         var mckUtils = new MckUtils();
@@ -54,9 +54,10 @@
                 ALSocket.MCK_TOKEN = data.token;
                 ALSocket.USER_DEVICE_KEY = data.deviceKey;
                 MCK_WEBSOCKET_URL = data.websocketUrl;
-                MCK_WEBSOCKET_PORT = (!mckUtils.startsWith(MCK_WEBSOCKET_URL, "https")) ? "15674" : "15675";
 
-                if (typeof data.websocketPort !== 'undefined') {
+                if (typeof data.websocketPort === "undefined") {
+                    MCK_WEBSOCKET_PORT = (!mckUtils.startsWith(MCK_WEBSOCKET_URL, "https")) ? "15674" : "15675";
+                } else {
                     MCK_WEBSOCKET_PORT = data.websocketPort;
                 }
             }
@@ -76,10 +77,11 @@
 
                     ALSocket.stompClient.connect("guest", "guest", ALSocket.onConnect, ALSocket.onError, '/');
                     window.addEventListener("beforeunload", function(e) {
-                      var check_url=e.target.activeElement.href;
-                      if(!check_url || 0 === check_url.length){
-                      ALSocket.disconnect();
-                      }
+                        var check_url;
+                        (e.target.activeElement) && (check_url=e.target.activeElement.href);
+                        if(!check_url || 0 === check_url.length){
+                            ALSocket.disconnect();
+                        }
                     });
                 }
             }
@@ -152,9 +154,10 @@
             }
         };
         ALSocket.subscribeToOpenGroup = function(group) {
+            console.log('adding subscription');
             if (ALSocket.stompClient && ALSocket.stompClient.connected) {
                 var subs = ALSocket.stompClient.subscribe("/topic/group-" + MCK_APP_ID + "-" + group.contactId, ALSocket.onOpenGroupMessage);
-                openGroupSubscriber.push(subs.id);
+                ALSocket.openGroupSubscriber.push(subs.id);
                 OPEN_GROUP_SUBSCRIBER_MAP[group.contactId] = subs.id;
             } else {
                 ALSocket.reconnect();
