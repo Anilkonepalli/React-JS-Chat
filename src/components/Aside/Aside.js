@@ -280,7 +280,7 @@ class Aside extends Component {
                                 <div className="mck-tab-title mck-truncate name"></div>
                                 <div className="mck-tab-status mck-truncate n-vis"></div>
                                 <div className="mck-typing-box mck-truncate n-vis">
-                                  <span className="name-text"></span><span>typing...</span>
+                                  <span className="name-text"></span>
                                 </div>
                               </a>
                             </div>
@@ -289,7 +289,7 @@ class Aside extends Component {
                                 <div className="mck-tab-title mck-truncate name"></div>
                                 <div className="mck-tab-status mck-truncate n-vis"></div>
                                 <div className="mck-typing-box mck-truncate n-vis">
-                                  <span className="name-text"></span><span>typing...</span>
+                                  <span className="name-text"></span>
                                 </div>
                               
                             </div>
