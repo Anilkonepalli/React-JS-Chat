@@ -159,9 +159,9 @@ function MckGroupService() {
             response.status = "success";
             response.data = group;
           }
-        } else if (data.status === "error") {
+        } else if (response.status === "error") {
           response.status = "error";
-          response.errorMessage = data.errorResponse[0].description;
+          response.errorMessage = response.errorResponse[0].description;
         }
         if (params.callback) {
           params.callback(response);
@@ -396,7 +396,8 @@ function MckGroupService() {
         if (params.apzCallback) {
           params.apzCallback(response, {
             groupId: params.groupId,
-            groupInfo: group
+            groupInfo: group,
+            users: params.users
           })
         }
       },
